@@ -5,7 +5,7 @@ $(document).ready(function () {
         var img = $('<div>').appendTo('#imgs');
         img.css({
             height: img.width() * 1.414,
-            'background-image': 'url("img/' + page + '.png")',
+            'background-image': 'url("img/' + page + '.jpg")',
             'background-repeat' : 'no-repeat',
             'background-size' : 'cover'
         });
