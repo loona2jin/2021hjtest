@@ -34,7 +34,6 @@ $(document).ready(function () {
         scrollX: true,
         scrollY: true,
         mouseWheel: true,
-        wheelAction: 'zoom',
         fadeScrollbars: true,
         disablePointer: isMobile(),
         disableTouch: !isMobile()
