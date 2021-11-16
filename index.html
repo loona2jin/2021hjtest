@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>'Hello, world!' example</title>
+    <link rel="stylesheet" type="text/css" href="css/scantron.css">
+    <script src="https://kit.fontawesome.com/35f5aba00d.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div id="sheet" style="display: none;">
+    <div id="scantron-pan">
+    <p style="text-align: center;">영역</p>
+    <table id="info-table">
+        <tr style="border-bottom: 1px solid;">
+            <td style="background: rgb(32,176,144); color: #fff; padding: 0.5em; border-top-left-radius: 10px; border-bottom: 1px solid;text-align: end;">아이디</td>
+            <td colspan="4"><input></td>
+        </tr>
+        <tr style="border-bottom: 1px solid;">
+            <td style="background: rgb(32,176,144); color: #fff; padding: 0.5em; border-bottom: 1px solid;text-align: end;">수험번호</td>
+            <td colspan="4"><input></td>
+        </tr>
+        <tr>
+            <td style="background: rgb(32,176,144); color: #fff; padding: 0.5em; border-bottom-left-radius: 10px;text-align: end;">필적 확인란</td>
+            <td colspan="4"><input></td>
+        </tr>
+    </table>
+        <br>
+    <table id="scantron"></table>
+        <!--<button id="submit">제출</button>-->
+        <a id="submit" href="#"><i class="fab far fa-paper-plane"></i></a>
+        <a id="twitter" href="#" style="display: none"><i class="fab fa-twitter"></i></a>
+    </div>
+</div>
+<div id="title-bar">
+    <ul>
+        <li><a  id="sheetBtn" href="#"><i class="fab far fa-edit" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fab fas fa-headphones-alt" aria-hidden="true"></i></a></li>
+    </ul>
+</div>
+<div class="iframe-wrap">
+    <div id="imgs">
+    </div>
+</div>
+</body>
+</html>
