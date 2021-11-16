@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var iscroll;
 
-    for(var page = 1; page <= 2; page++) {
+    for(var page = 1; page <= 4; page++) {
         var img = $('<div>').appendTo('#imgs');
         img.css({
             height: img.width() * 1.414,
@@ -119,7 +119,7 @@ $(document).ready(function () {
     };
     var query = function () {
 
-        var myKey = '1KgNyPYRZGUwt4g7k0UvGd_du5ccaJe9OsEdC-D9wI2A';
+        var myKey = '14BRXHBC9EF9fL8gcD6PZdGsw5GVwBH6m8ELzlaYXfn0';
         var url = 'https://docs.google.com/spreadsheets/d/'+myKey+'/gviz/tq?',
             params = {
                 tqx: 'responseHandler:' + 'callbackClass.my_callback'//'my_callback'
