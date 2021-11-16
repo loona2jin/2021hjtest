@@ -93,7 +93,7 @@ $(document).ready(function () {
             });
         }
         callbackClass.setValues(data);
-        if(!isEmpty || confirm(test + ' 빈 값'))
+        if(!isEmpty || confirm('정답을 체크하지 않은 문제가 있습니다. 그대로 제출하시겠습니까?'))
             query();
     });
 
@@ -162,7 +162,7 @@ function CallbackClass() {
             }
         }
         console.log(score);
-        alert(score);
+        alert(score + '점');
         $('#twitter').css('display','block');
     };
     this.setValues = function(data) {
