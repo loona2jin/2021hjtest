@@ -91,6 +91,7 @@ $(document).ready(function () {
             var audio = new Audio('test.MP3');
             audio.onloadstart = function() {
                 isLoad = true;
+                $('#listenBtn .fab').addClass('animation-blink');
             };
             audio.oncanplaythrough  = function () {
                 if (!isPlaying)
@@ -107,6 +108,7 @@ $(document).ready(function () {
             }, false);
             audio.addEventListener("ended", function(){
                 isEnded = true;
+                $('#listenBtn .fab').removeClass('animation-blink');
                 $('#listenBtn .fab').css('color', 'rgb(122 209 189)');
                 $('#listenBtn').css('cursor', 'auto');
                 $('#listenBtn').off('click');
