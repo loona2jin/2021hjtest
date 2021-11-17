@@ -39,8 +39,20 @@ $(document).ready(function () {
         'width':'100%',
         'height': $('#title-bar').height()
     }).appendTo(prev);
-    $('<div>').text('듣기').css('float','right').appendTo(guideBar);
-    $('<div>').text('답안지').css('float','right').appendTo(guideBar);
+    $('<div>').text('[답안지]').css({
+        'float':'right',
+        'margin': '0 0.1em',
+        'width': $('#title-bar ul li a .fab').width(),
+        'text-align': 'center',
+        'font-weight': 900
+    }).appendTo(guideBar);
+    $('<div>').text('[듣기]').css({
+        'float':'right',
+        'margin': '0 0.1em',
+        'width': $('#title-bar ul li a .fab').width(),
+        'text-align': 'center',
+        'font-weight': 900
+    }).appendTo(guideBar);
     
     iscroll = new IScroll('.iframe-wrap',{
         scrollbars: true,
