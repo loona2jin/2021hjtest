@@ -165,7 +165,13 @@ ul li a .fab {
     color: #fff;
     transition: .5s;
 }
-
+.animation-blink {
+    animation: blink 2s ease-in infinite;
+}
+@keyframes blink {
+    from, to { opacity: 1 }
+    50% { opacity: 0 }
+}
 #submit, #twitter {
     float: right;
     padding: 20px;
