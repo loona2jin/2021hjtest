@@ -42,6 +42,7 @@ $(document).ready(function () {
     $('<div>').text('[답안지]').css({
         'float':'right',
         'margin': '0 0.1em',
+        'padding': '2px',
         'width': $('#title-bar ul li a .fab').width(),
         'text-align': 'center',
         'font-weight': 900,
@@ -50,6 +51,7 @@ $(document).ready(function () {
     $('<div>').text('[듣기]').css({
         'float':'right',
         'margin': '0 0.1em',
+        'padding': '2px',
         'width': $('#title-bar ul li a .fab').width(),
         'text-align': 'center',
         'font-weight': 900,
