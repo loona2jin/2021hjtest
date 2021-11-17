@@ -25,7 +25,23 @@ $(document).ready(function () {
         if(navigator.userAgentData) return navigator.userAgentData.mobile;
         else return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
     }
-
+    
+    var prev = $('<div>').css({
+            'position': 'absolute',
+            'width': '100%',
+            'height': '100%',
+            'z-index': 101,
+            'background': '#ffffff80'
+        }).appendTo('body');
+    var guideBar = $('<div>').css({
+        'position': 'absolute',
+        'top': '6%',
+        'width':'100%'
+        'height': $('#title-bar').height()
+    }).appendTo(prev);
+    $('<div>').text('듣기').css('float','right').appendTo(guideBar);
+    $('<div>').text('답안지').css('float','right').appendTo(guideBar);
+    
     iscroll = new IScroll('.iframe-wrap',{
         scrollbars: true,
         zoomMin: 1,
