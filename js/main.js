@@ -97,7 +97,7 @@ $(document).ready(function () {
                 $('#listenBtn .fab').addClass('animation-blink');
             };
             audio.ondurationchange = function() {
-                document.getElementById('load"').innerHTML = audio.duration;
+                document.getElementById('load"').innerHTML = audio.buffered.end(0);
             };
             audio.oncanplaythrough  = function () {
                 if (!isPlaying)
