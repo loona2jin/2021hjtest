@@ -198,7 +198,7 @@ function CallbackClass() {
                     'border': 'solid red',
                     'border-radius': '50%'
                 });
-                score += answers[num].c[0].v;
+                scorehj += answers[num].c[0].v;
             } else {
                 $('#num' + (num + 1)).css({
                     'border': '',
@@ -206,7 +206,7 @@ function CallbackClass() {
                 });
             }
         }
-        //console.log(score);
+        //console.log(scorehj);
         $('#score').text(scorehj + '점');
         $('#twitter').css('display','block');
         $.ajax({
