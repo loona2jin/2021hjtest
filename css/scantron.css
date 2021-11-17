@@ -198,6 +198,7 @@ ul li a .fab {
 #imgs div{
     width: 100vw;
     max-width: 802px;
+    margin: 5px;
 }
 #sheet{
     position: absolute;
