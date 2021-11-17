@@ -261,7 +261,9 @@ ul li a .fab {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+.tg i {
+    color: white;
+}
 .tg-0lax button {
     margin: auto;
     display: block;
