@@ -20,7 +20,7 @@ $(document).ready(function () {
         'height': '100%',
         'line-height': $('#title-bar ul').height() - 4 + 'px'
     });
-
+    $('#title-bar h3').css('line-height', $('#title-bar').height() + 'px');
     var isMobile = function(){
         if(navigator.userAgentData) return navigator.userAgentData.mobile;
         else return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
