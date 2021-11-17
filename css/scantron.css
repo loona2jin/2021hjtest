@@ -239,4 +239,9 @@ ul li a .fab {
 #scantron-pan button {
     float: right;
 }
-
+#scantron-pan #score {
+    font-family: 'East Sea Dokdo', cursive;
+    color: red;
+    float: right;
+    padding: 0px 20px;
+}
