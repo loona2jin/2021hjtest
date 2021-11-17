@@ -278,6 +278,6 @@ ul li a .fab {
 
 .tg th, .tg td{
     overflow: hidden;
-    white-space: nowrap;
+    white-space: pre-wrap;
     text-overflow: ellipsis;
 }
