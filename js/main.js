@@ -179,6 +179,7 @@ $(document).ready(function () {
 var callbackClass;
 function CallbackClass() {
     var testData = [];
+    var scorehj = 0;
     var parse = function (data) {
         if(!data) {
             alert("서버에 접근할 수 없습니다.");
@@ -189,9 +190,8 @@ function CallbackClass() {
             return false;
         }
 
-        var answers = data.table.rows;
-        var scorehj = 0;
-
+        var answers = data.table.rows;       
+        scorehj = 0;
         for(var num = 0; num < answers.length; num++) {
             if(testData[num] == answers[num].c[1].v) {
                 $('#num' + (num + 1)).css({
