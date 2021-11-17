@@ -36,7 +36,7 @@ $(document).ready(function () {
     var guideBar = $('<div>').css({
         'position': 'absolute',
         'top': '6%',
-        'width':'100%'
+        'width':'100%',
         'height': $('#title-bar').height()
     }).appendTo(prev);
     $('<div>').text('듣기').css('float','right').appendTo(guideBar);
