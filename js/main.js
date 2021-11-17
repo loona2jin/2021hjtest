@@ -1,6 +1,10 @@
 $(document).ready(function () {
     var iscroll;
 
+    $('.tg-0lax button').click(function(){
+        $('#prev').remove();
+    });
+    
     for(var page = 1; page <= 4; page++) {
         var img = $('<div>').appendTo('#imgs');
         img.css({
