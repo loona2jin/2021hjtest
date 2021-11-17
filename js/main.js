@@ -145,6 +145,10 @@ $(document).ready(function () {
                 document.getElementById('load').innerHTML = '';
                 //audio.play();
             }
+            audio.addEventListener('play', function () {
+                clearInterval(set);
+                document.getElementById('load').innerHTML = '';
+            });
             audio.addEventListener('timeupdate', function () {
                 var transTime = function(sec) {
                     var m = Math.floor((sec % 3600) / 60);
