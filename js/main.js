@@ -72,7 +72,7 @@ $(document).ready(function () {
                 fadeScrollbars: true
             });
             iscroll.enabled = false;
-            $('#sheetBtn .fab').css('color','rgb(122 209 189)');
+            $('#sheetBtn .fab').css('color','rgb(0,0,0)');
         } else {
             document.getElementById('sheet').style.display = 'none';
             sheepWrap.destroy();
