@@ -263,6 +263,7 @@ ul li a .fab {
 }
 .tg i {
     color: white;
+    text-align: center;
 }
 .tg-0lax button {
     margin: auto;
@@ -276,7 +277,6 @@ ul li a .fab {
 }
 
 .tg th, .tg td{
-    padding: 5%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
