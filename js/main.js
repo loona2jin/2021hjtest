@@ -138,6 +138,9 @@ $(document).ready(function () {
         if(!isEmpty || confirm('정답을 체크하지 않은 문제가 있습니다. 그대로 제출하시겠습니까?'))
             query();
     });
+    $('#twitter').click(function(){
+        window.open('https://twitter.com/intent/tweet?text=2022 오빛수학능력시험 희진영역 점수: ' + callbackClass.getScore() + '&url=https://loona2jin.github.io/2021hjtest&hashtags=#MAMAVOTE#loona');
+    });
 
     var jsonp = function (url) {
         var script = window.document.createElement('script');
@@ -203,7 +206,7 @@ function CallbackClass() {
                 });
             }
         }
-        console.log(score);
+        //console.log(score);
         $('#score').text(score + '점');
         $('#twitter').css('display','block');
         $.ajax({
@@ -221,6 +224,9 @@ function CallbackClass() {
             }
         });
     };
+    this.getScore = function() {
+        return score;
+    }
     this.setValues = function(data) {
         testData = data;
     };
