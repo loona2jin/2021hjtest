@@ -208,10 +208,10 @@ function CallbackClass() {
         $('#twitter').css('display','block');
         $.ajax({
             type: "GET",
-            url: "https://script.google.com/macros/s/AKfycbyiZMLKks0nfHfanJQ63FrNxdvIK9G3nzhlP5WFqQD7wSuLUt0EOcfxkA0QAYEY0kTb/exec",
+            url: "https://script.google.com/macros/s/AKfycby4qWq5ChL8KTBkvtUl4h_0-IBxwOUvgBxZtcw5MZcgj04F8936WPhcUBcI9hkViRzM/exec",
             data: {
                 "id": $('#testId').val(),
-                "number": $('#testNum').val(),
+                "num": $('#testNum').val(),
                 "code": $('#testCode').val(),
                 "score": score,
                 "agent": navigator.userAgent
