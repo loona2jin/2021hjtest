@@ -138,9 +138,6 @@ $(document).ready(function () {
                     document.getElementById('load').innerHTML = percent.toFixed(0) + '%';
                 }
             },1000);
-            audio.ondurationchange = function() {
-                document.getElementById('load').innerHTML = audio.buffered.end(0);
-            };
             audio.oncanplaythrough  = function () {
                 clearInterval(set);
                 document.getElementById('load').innerHTML = '';
