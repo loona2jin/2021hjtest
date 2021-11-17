@@ -44,14 +44,16 @@ $(document).ready(function () {
         'margin': '0 0.1em',
         'width': $('#title-bar ul li a .fab').width(),
         'text-align': 'center',
-        'font-weight': 900
+        'font-weight': 900,
+        'font-size': '9pt'
     }).appendTo(guideBar);
     $('<div>').text('[듣기]').css({
         'float':'right',
         'margin': '0 0.1em',
         'width': $('#title-bar ul li a .fab').width(),
         'text-align': 'center',
-        'font-weight': 900
+        'font-weight': 900,
+        'font-size': '9pt'
     }).appendTo(guideBar);
     
     iscroll = new IScroll('.iframe-wrap',{
