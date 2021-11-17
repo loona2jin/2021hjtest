@@ -100,7 +100,7 @@ $(document).ready(function () {
             var set=setInterval(function() {
                 if(audio.buffered.length > 0){
                     var percent = (audio.buffered.end(0) / audio.duration) * 100;
-                    document.getElementBiId('load').innerHTML = percent+'%';
+                    document.getElementById('load').innerHTML = percent+'%';
                     if(percent === 100){
                         clearInterval(set); 
                     } 
