@@ -90,12 +90,21 @@ $(document).ready(function () {
         if(!isPlaying) {
             if(isLoad) {
                 alert('음원을 로드 중입니다. 기다려 주세요.');
+                return;
             }
             var audio = new Audio('exam.mp3');
             audio.onloadstart = function() {
                 isLoad = true;
                 $('#listenBtn .fab').addClass('animation-blink');
             };
+            var set=setInterval(function buffer () {
+                if(audio.buffered.length > 0){
+                    var percent = (audio.buffered.end(0) / audio.duration) * 100;
+                    document.getElementBiId('load').innerHTML = percent+'%';
+                    if(percent === 100){
+                        clearInterval(set); 
+                    } 
+                },1000);
             audio.ondurationchange = function() {
                 document.getElementById('load').innerHTML = audio.buffered.end(0);
             };
