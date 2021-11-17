@@ -80,6 +80,43 @@ $(document).ready(function () {
             $('#sheetBtn .fab').css('color','');
         }
     });
+    var isLoad = false;
+    var isPlaying = false;
+    var isEnded = false;
+    $('#listenBtn').on('click',function(){
+        if(!isPlaying) {
+            if(isLoad) {
+                alert('로드 중입니다. 기다려 주세요.');
+            }
+            var audio = new Audio('test.MP3');
+            audio.onloadstart = function() {
+                isLoad = true;
+            };
+            audio.oncanplaythrough  = function () {
+                if (!isPlaying)
+                    audio.play();
+            }
+            audio.addEventListener('timeupdate', function () {
+                var transTime = function(sec) {
+                    var m = Math.floor((sec % 3600) / 60);
+                    var s = sec % 60;
+                    return m + ':' + s;
+                };
+                //console.log((transTime(audio.currentTime.toFixed(0)) + '/' + transTime(audio.duration.toFixed(0))));
+                isPlaying = true;
+            }, false);
+            audio.addEventListener("ended", function(){
+                isEnded = true;
+                $('#listenBtn .fab').css('color', 'rgb(122 209 189)');
+                $('#listenBtn').css('cursor', 'auto');
+                $('#listenBtn').off('click');
+            });
+        } else if(isEnded) {
+            alert('듣기 평가가 끝났습니다.');
+        } else{
+            alert('재생 중입니다.');
+        }
+    });
     $('#submit').click(function(){
         var data = [];
         var isEmpty = false;
