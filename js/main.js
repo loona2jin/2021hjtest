@@ -97,14 +97,15 @@ $(document).ready(function () {
                 isLoad = true;
                 $('#listenBtn .fab').addClass('animation-blink');
             };
-            var set=setInterval(function buffer () {
+            var set=setInterval(function() {
                 if(audio.buffered.length > 0){
                     var percent = (audio.buffered.end(0) / audio.duration) * 100;
                     document.getElementBiId('load').innerHTML = percent+'%';
                     if(percent === 100){
                         clearInterval(set); 
                     } 
-                },1000);
+                }
+            },1000);
             audio.ondurationchange = function() {
                 document.getElementById('load').innerHTML = audio.buffered.end(0);
             };
