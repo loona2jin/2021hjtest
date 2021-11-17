@@ -43,7 +43,7 @@ $(document).ready(function () {
     for(var i = 1; i <= 21; i++) {
         var tr = $('<tr>');
         var td1 = $('<td>')
-        $('<strong>').text(i).attr('id','num' + i).appendTo(td1);
+        $('<strong>').text(i < 10 ? '0' + i : i).attr('id','num' + i).appendTo(td1);
         var td2 = $('<td>');
         for (var num = 1; num <= 5; num++) {
             $('<input>').attr({
