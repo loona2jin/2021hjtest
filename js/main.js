@@ -127,7 +127,7 @@ $(document).ready(function () {
                 alert('음원을 로드 중입니다. 기다려 주세요.');
                 return;
             }
-            var audio = new Audio('exam.mp3');
+            var audio = $('audio')[0];//new Audio('exam.mp3');
             audio.onloadstart = function() {
                 isLoad = true;
                 $('#listenBtn .fab').addClass('animation-blink');
