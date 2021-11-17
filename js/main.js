@@ -25,6 +25,13 @@ $(document).ready(function () {
         'line-height': $('#title-bar ul').height() - 4 + 'px'
     });
     $('#title-bar h3').css('line-height', $('#title-bar').height() + 'px');
+    
+    $('.tg i').css({
+        width: $('#title-bar ul li a .fab').width(),
+        height: $('#title-bar ul li a .fab').height(),
+        'line-height': $('#title-bar ul li a .fab').height() + 'px'
+    });
+    
     var isMobile = function(){
         if(navigator.userAgentData) return navigator.userAgentData.mobile;
         else return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
