@@ -100,16 +100,14 @@ $(document).ready(function () {
             var set=setInterval(function() {
                 if(audio.buffered.length > 0){
                     var percent = (audio.buffered.end(0) / audio.duration) * 100;
-                    document.getElementById('load').innerHTML = percent+'%';
-                    if(percent === 100){
-                        clearInterval(set); 
-                    } 
+                    document.getElementById('load').innerHTML = percent.toFixed(0) + '%';
                 }
             },1000);
             audio.ondurationchange = function() {
                 document.getElementById('load').innerHTML = audio.buffered.end(0);
             };
             audio.oncanplaythrough  = function () {
+                clearInterval(set);
                 document.getElementById('load').innerHTML = '';
                 audio.play();
             }
