@@ -40,7 +40,7 @@ $(document).ready(function () {
     });
 
     var code = ['a', 'b', 'c', 'd', 'e'];
-    for(var i = 1; i <= 20; i++) {
+    for(var i = 1; i <= 21; i++) {
         var tr = $('<tr>');
         var td1 = $('<td>')
         $('<strong>').text(i).attr('id','num' + i).appendTo(td1);
