@@ -201,7 +201,7 @@ function CallbackClass() {
             }
         }
         console.log(score);
-        alert(score + '점');
+        $('#score').text(score + '점');
         $('#twitter').css('display','block');
     };
     this.setValues = function(data) {
