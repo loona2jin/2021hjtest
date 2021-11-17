@@ -55,6 +55,9 @@ $(document).ready(function () {
         'font-weight': 900,
         'font-size': '9pt'
     }).appendTo(guideBar);
+    $('<button>').css({}).text('시  작').click(function() {
+        prev.remove();
+    }).appendTo(prev);
     
     iscroll = new IScroll('.iframe-wrap',{
         scrollbars: true,
