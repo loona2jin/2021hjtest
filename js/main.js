@@ -64,7 +64,7 @@ $(document).ready(function () {
         tr.appendTo('#scantron');
     }
     var sheepWrap;
-    $('#sheetBtn').click(function(){
+    $('#sheetBtn, #sheet').click(function(){
         if(document.getElementById('sheet').style.display == 'none') {
             document.getElementById('sheet').style.display = 'block';
             sheepWrap = new IScroll('#sheet',{
@@ -79,6 +79,9 @@ $(document).ready(function () {
             iscroll.enabled = true;
             $('#sheetBtn .fab').css('color','');
         }
+    });
+    $('#scantron-pan').click(function(e){
+        e.stopPropagation();
     });
     var isLoad = false;
     var isPlaying = false;
