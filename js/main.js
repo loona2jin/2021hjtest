@@ -118,6 +118,7 @@ $(document).ready(function () {
     $('#scantron-pan').click(function(e){
         e.stopPropagation();
     });
+    var audio = $('audio')[0];
     var isLoad = false;
     var isPlaying = false;
     var isEnded = false;
@@ -127,7 +128,8 @@ $(document).ready(function () {
                 alert('음원을 로드 중입니다. 기다려 주세요.');
                 return;
             }
-            var audio = $('audio')[0];//new Audio('exam.mp3');
+            audio.play();
+            //var audio = new Audio('exam.mp3');
             audio.onloadstart = function() {
                 isLoad = true;
                 $('#listenBtn .fab').addClass('animation-blink');
@@ -141,7 +143,7 @@ $(document).ready(function () {
             audio.oncanplaythrough  = function () {
                 clearInterval(set);
                 document.getElementById('load').innerHTML = '';
-                audio.play();
+                //audio.play();
             }
             audio.addEventListener('timeupdate', function () {
                 var transTime = function(sec) {
