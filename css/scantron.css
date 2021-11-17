@@ -245,3 +245,13 @@ ul li a .fab {
     float: right;
     padding: 0px 20px;
 }
+
+#prev {
+    z-index: 105;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000bd;
+    top: 0px;
+    left: 0px;
+}
