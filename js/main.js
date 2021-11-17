@@ -25,14 +25,21 @@ $(document).ready(function () {
         if(navigator.userAgentData) return navigator.userAgentData.mobile;
         else return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
     }
-    /*
-    var prev = $('<div>').css({
+    
+    /*var prev = $('<div>').css({
             'position': 'absolute',
             'width': '100%',
             'height': '100%',
             'z-index': 101,
             'background': '#ffffff80'
         }).appendTo('body');
+    $('<table>')
+        .addClass('info')
+        .css({
+            'margin': 'auto'
+        })
+        .appendTo(prev);
+    ('.info');
     var guideBar = $('<div>').css({
         'position': 'absolute',
         'top': '6%',
