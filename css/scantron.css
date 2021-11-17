@@ -272,3 +272,7 @@ ul li a .fab {
     text-align: center;
     text-decoration: none;
 }
+
+.tg th, .tg td{
+    padding: 5%;
+}
