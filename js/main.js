@@ -100,8 +100,8 @@ $(document).ready(function () {
                 document.getElementById('load').innerHTML = audio.buffered.end(0);
             };
             audio.oncanplaythrough  = function () {
-                if (!isPlaying)
-                    audio.play();
+                document.getElementById('load').innerHTML = '';
+                audio.play();
             }
             audio.addEventListener('timeupdate', function () {
                 var transTime = function(sec) {
