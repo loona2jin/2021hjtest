@@ -134,20 +134,21 @@ $(document).ready(function () {
                 isLoad = true;
                 $('#listenBtn .fab').addClass('animation-blink');
             };
-            var set=setInterval(function() {
+            /*var set=setInterval(function() {
                 if(audio.buffered.length > 0){
                     var percent = (audio.buffered.end(0) / audio.duration) * 100;
                     document.getElementById('load').innerHTML = percent.toFixed(0) + '%';
                 }
-            },1000);
+            },1000);*/
             audio.oncanplaythrough  = function () {
                 clearInterval(set);
                 document.getElementById('load').innerHTML = '';
                 //audio.play();
             }
             audio.addEventListener('play', function () {
-                clearInterval(set);
-                document.getElementById('load').innerHTML = '';
+                //clearInterval(set);
+                //document.getElementById('load').innerHTML = '';
+                isPlaying = true;
             });
             audio.addEventListener('timeupdate', function () {
                 var transTime = function(sec) {
