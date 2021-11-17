@@ -25,7 +25,7 @@ $(document).ready(function () {
         if(navigator.userAgentData) return navigator.userAgentData.mobile;
         else return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
     }
-    
+    /*
     var prev = $('<div>').css({
             'position': 'absolute',
             'width': '100%',
@@ -59,7 +59,7 @@ $(document).ready(function () {
     }).appendTo(guideBar);
     $('<button>').css({}).text('시  작').click(function() {
         prev.remove();
-    }).appendTo(prev);
+    }).appendTo(prev);*/
     
     iscroll = new IScroll('.iframe-wrap',{
         scrollbars: true,
