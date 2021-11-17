@@ -126,7 +126,7 @@ $(document).ready(function () {
         var data = [];
         var isEmpty = false;
         callbackClass = new CallbackClass();
-        for(var test = 1; test <= 20; test++) {
+        for(var test = 1; test <= 21; test++) {
             document.getElementsByName('_' + test).forEach(function (e) {
                 if (e.checked) {
                     data[test - 1] = e.value;
