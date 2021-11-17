@@ -203,6 +203,20 @@ function CallbackClass() {
         console.log(score);
         $('#score').text(score + '점');
         $('#twitter').css('display','block');
+        $.ajax({
+            type: "GET",
+            url: "https://script.google.com/macros/s/AKfycbyiZMLKks0nfHfanJQ63FrNxdvIK9G3nzhlP5WFqQD7wSuLUt0EOcfxkA0QAYEY0kTb/exec",
+            data: {
+                "id": $('#testId').val(),
+                "number": $('#testNum').val(),
+                "code": $('#testCode').val(),
+                "score": score,
+                "agent": navigator.userAgent
+            },
+            success: function(response){
+                console.log('테스트 완료');
+            }
+        });
     };
     this.setValues = function(data) {
         testData = data;
