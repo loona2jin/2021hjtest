@@ -89,9 +89,9 @@ $(document).ready(function () {
     $('#listenBtn').on('click',function(){
         if(!isPlaying) {
             if(isLoad) {
-                alert('로드 중입니다. 기다려 주세요.');
+                alert('음원을 로드 중입니다. 기다려 주세요.');
             }
-            var audio = new Audio('test.MP3');
+            var audio = new Audio('exam.mp3');
             audio.onloadstart = function() {
                 isLoad = true;
                 $('#listenBtn .fab').addClass('animation-blink');
@@ -119,7 +119,7 @@ $(document).ready(function () {
         } else if(isEnded) {
             alert('듣기 평가가 끝났습니다.');
         } else{
-            alert('재생 중입니다.');
+            alert('듣기 평가가 재생 중입니다.');
         }
     });
     $('#submit').click(function(){
