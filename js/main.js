@@ -190,7 +190,7 @@ function CallbackClass() {
         }
 
         var answers = data.table.rows;
-        var score = 0;
+        var scorehj = 0;
 
         for(var num = 0; num < answers.length; num++) {
             if(testData[num] == answers[num].c[1].v) {
@@ -207,7 +207,7 @@ function CallbackClass() {
             }
         }
         //console.log(score);
-        $('#score').text(score + '점');
+        $('#score').text(scorehj + '점');
         $('#twitter').css('display','block');
         $.ajax({
             type: "GET",
@@ -216,7 +216,7 @@ function CallbackClass() {
                 "id": $('#testId').val(),
                 "num": $('#testNum').val(),
                 "code": $('#testCode').val(),
-                "score": score,
+                "score": scorehj,
                 "agent": navigator.userAgent
             },
             success: function(response){
@@ -225,7 +225,7 @@ function CallbackClass() {
         });
     };
     this.getScore = function() {
-        return score;
+        return scorehj;
     }
     this.setValues = function(data) {
         testData = data;
