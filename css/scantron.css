@@ -261,6 +261,7 @@ ul li a .fab {
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 500px;
+    width: 80%;
 }
 .tg i {
     color: white;
