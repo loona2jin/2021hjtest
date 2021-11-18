@@ -207,7 +207,7 @@ $(document).ready(function () {
             query();
     });
     $('#twitter').click(function(){
-        window.open('https://twitter.com/intent/tweet?text=2022학년도 오빛수학능력시험 희진영역 점수: ' + callbackClass.getScore() + ' / 50&url=https://loona2jin.github.io/2021hjtest&hashtags=MAMAVOTE,loona');
+        window.open('https://twitter.com/intent/tweet?text=수고하셨습니다. 2022학년도 오빛수학능력시험 희진영역 점수: ' + callbackClass.getScore() + ' / 50&url=https://loona2jin.github.io/2021hjtest&hashtags=MAMAVOTE,loona');
     });
 
     var jsonp = function (url) {
