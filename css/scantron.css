@@ -265,6 +265,8 @@ ul li a .fab {
 }
 .tg i {
     text-align: center;
+    border: 1px solid;
+    background: white;
 }
 .tg-0lax button {
     margin: auto;
@@ -283,4 +285,5 @@ ul li a .fab {
     white-space: pre-wrap;
     text-overflow: ellipsis;
     text-align: center;
+    padding: 5% 0 5% 0;
 }
