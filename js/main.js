@@ -143,7 +143,7 @@ $(document).ready(function () {
     $('#listenBtn').on('click',function(){
         if(!isPlaying) {
             if(isLoad) {
-                alert('음원을 로드 중입니다. 기다려 주세요.');
+                alert('음원을 불러오는 중입니다. 기다려 주세요.');
                 return;
             }
             audio.play();
@@ -207,7 +207,7 @@ $(document).ready(function () {
             query();
     });
     $('#twitter').click(function(){
-        window.open('https://twitter.com/intent/tweet?text=2022 오빛수학능력시험 희진영역 점수: ' + callbackClass.getScore() + '점&url=https://loona2jin.github.io/2021hjtest&hashtags=MAMAVOTE,loona');
+        window.open('https://twitter.com/intent/tweet?text=2022학년도 오빛수학능력시험 희진영역 점수: ' + callbackClass.getScore() + ' / 50&url=https://loona2jin.github.io/2021hjtest&hashtags=MAMAVOTE,loona');
     });
 
     var jsonp = function (url) {
