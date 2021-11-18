@@ -276,6 +276,7 @@ ul li a .fab {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .tg th, .tg td{
