@@ -191,6 +191,8 @@ $(document).ready(function () {
         }
     });
     $('#submit').click(function(){
+        if(isReceived)
+            return;
         var data = [];
         var isEmpty = false;
         callbackClass = new CallbackClass();
@@ -215,7 +217,8 @@ $(document).ready(function () {
         script.async = true;
         script.src = url;
         script.onerror = function () {
-            alert('제출 과정에서 오류가 발생했습니다.')
+            alert('제출 과정에서 오류가 발생했습니다.');
+            isReceived= false;
         };
         var done = false;
         script.onload = script.onreadystatechange = function () {
@@ -230,7 +233,7 @@ $(document).ready(function () {
         window.document.getElementsByTagName('head')[0].appendChild(script);
     };
     var query = function () {
-
+        isReceived = true;
         var myKey = '14BRXHBC9EF9fL8gcD6PZdGsw5GVwBH6m8ELzlaYXfn0';
         var url = 'https://docs.google.com/spreadsheets/d/'+myKey+'/gviz/tq?',
             params = {
@@ -244,11 +247,13 @@ $(document).ready(function () {
         return jsonp(url); // Call JSONP helper function
     }
 });
+var isReceived= false;
 var callbackClass;
 function CallbackClass() {
     var testData = [];
     var scorehj = 0;
     var parse = function (data) {
+        isReceived= false;
         if(!data) {
             alert("서버에 접근할 수 없습니다.");
             return false;
@@ -277,6 +282,7 @@ function CallbackClass() {
         //console.log(scorehj);
         $('#score').text(scorehj + '점');
         $('#twitter').css('display','block');
+        
         $.ajax({
             type: "GET",
             url: "https://script.google.com/macros/s/AKfycby4qWq5ChL8KTBkvtUl4h_0-IBxwOUvgBxZtcw5MZcgj04F8936WPhcUBcI9hkViRzM/exec",
